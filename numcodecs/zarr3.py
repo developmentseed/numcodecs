@@ -35,6 +35,7 @@ from warnings import warn
 import numpy as np
 
 import numcodecs
+from numcodecs.zarr3_registry import register_codec
 
 try:
     import zarr
@@ -376,6 +377,29 @@ JenkinsLookup3 = _add_docstring(
 # array-to-bytes codecs
 PCodec = _add_docstring(_make_array_bytes_codec("pcodec", "PCodec"), "numcodecs.pcodec.PCodec")
 ZFPY = _add_docstring(_make_array_bytes_codec("zfpy", "ZFPY"), "numcodecs.zfpy.ZFPY")
+
+register_codec(BZ2)
+register_codec(CRC32)
+register_codec(CRC32C)
+register_codec(LZ4)
+register_codec(LZMA)
+register_codec(ZFPY)
+register_codec(Adler32)
+register_codec(AsType)
+register_codec(BitRound)
+register_codec(Blosc)
+register_codec(Delta)
+register_codec(FixedScaleOffset)
+register_codec(Fletcher32)
+register_codec(GZip)
+register_codec(JenkinsLookup3)
+register_codec(PCodec)
+register_codec(PackBits)
+register_codec(Quantize)
+register_codec(Shuffle)
+register_codec(Zlib)
+register_codec(Zstd)
+
 
 __all__ = [
     "BZ2",
