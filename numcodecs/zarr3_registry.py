@@ -25,7 +25,7 @@ entries: dict[str, EntryPoints] = {}
 def run_entrypoints():
     entries.clear()
     eps = entry_points()
-    entries.update({e.name: e for e in eps.select(group="numcodecs.codecs")})
+    entries.update({e.name: e for e in eps.select(group="numcodecs.zarr3")})
 
 
 run_entrypoints()
