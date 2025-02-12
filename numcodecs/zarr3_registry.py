@@ -79,6 +79,6 @@ def register_codec(cls, codec_id=None):
 
     """
     if codec_id is None:
-        codec_id = cls.codec_id
+        codec_id = cls.codec_name
     logger.debug("Registering codec '%s'", codec_id)
     codec_registry[codec_id] = cls
